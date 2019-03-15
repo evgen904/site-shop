@@ -46,8 +46,6 @@
 	font-weight: normal;
 }
 
-
-
 /* animation */
 
 
@@ -2217,6 +2215,162 @@ body {
 		background-color: #ccc;
 		height: 580px;
 	}
+  .page-cart {
+    padding: 0 160px 0;
+    max-width: 1512px;
+    .product-cart {
+      padding: 22px;
+      margin: 0 0 24px;
+      background-color: #fff;
+      position: relative;
+      display: flex;
+      width: 100%;
+      .product-img {
+        width: 260px;
+        text-align: center;
+      }
+      .product-desk {
+        padding: 0 0 0 22px;
+        width: 100%;
+        max-width: 582px;
+        .product-name {
+          color: #969A9C;
+          font-size: 12px;
+          font-family: "GothamProBold";
+          margin-bottom: 8px;
+        }
+        .product-vender {
+          color: #2C2C2B;
+          font-family: "GothamProBold";
+          font-size: 16px;
+          margin-bottom: 20px;
+          min-height: 60px;
+        }
+        .product-params {
+          color: #2C2C2B;
+          font-size: 16px;
+          font-family: "GothamProRegular";
+          margin-bottom: 36px;
+        }
+        .product-amount {
+          display: flex;
+          align-items: center;
+          button {
+            cursor: pointer;
+            outline-style: none;
+            padding: 0;
+            margin: 0;
+            border: none;
+            background: transparent;
+            color: #2C2C2B;
+            font-size: 16px;
+            font-family: "GothamProRegular";
+            width: 20px;
+            text-align: center;
+          }
+          input[type="text"] {
+            outline-style: none;
+            padding: 0;
+            margin: 0;
+            border: none;
+            background: transparent;
+            color: #2C2C2B;
+            font-size: 16px;
+            font-family: "GothamProRegular";
+            width: 30px;
+            text-align: center;
+          }
+        }
+      }
+      .product-price {
+        display: flex;
+        align-items: center;
+        color: #2C2C2B;
+        font-size: 24px;
+        font-family: "GothamProMedium";
+      }
+      .del {
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 18px;
+        height: 18px;
+        background-color: #ccc;
+      }
+    }
+    .price-total-wr {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .price-total-title {
+        font-size: 12px;
+        color: #969A9C;
+        font-family: "GothamProBold";
+        text-transform: uppercase;
+        padding-top: 4px;
+      }
+      .price-total-val {
+        font-size: 24px;
+        color: #2C2C2B;
+        font-family: "GothamProMedium";
+        margin-left: 32px;
+      }
+      .price-total-btn {
+        margin-left: 72px;
+        button {
+          cursor: pointer;
+          display: inline-block;
+          vertical-align: top;
+          background: #6F815A;
+          color: #fff;
+          font-size: 14px;
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 14px 34px 10px;
+          height: 48px;
+          font-family: "GothamProMedium";
+          position: relative;
+          min-width: 208px;
+          text-align: center;
+          &:after {
+            content: '';
+            display: block;
+            background: #E9D1EB;
+            width: 80px;
+            height: 2px;
+            position: absolute;
+            top: 8px;
+            left: -16px;
+          }
+          &:before {
+            content: '';
+            display: block;
+            background: #E9D1EB;
+            width: 80px;
+            height: 2px;
+            position: absolute;
+            bottom: 8px;
+            right: -16px;
+          }
+        }
+      }
+    }
+  }
+  .site-path {
+    font-family: "GothamProBold";
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 120px;
+    a {
+      text-decoration: none;
+      color: #6F815A;
+    }
+    span {
+      color: #6F815A;
+      padding: 0 4px;
+    }
+  }
 }
 
 
