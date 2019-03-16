@@ -1705,8 +1705,126 @@ body {
 						font-size: 18px;
 						color: #2C2C2B;
 						text-decoration: none;
-						padding: 0 35px;
+            position: relative;
+            padding: 0 35px;
+            > span {
+              display: block;
+              padding: 25px 0;
+              position: relative;
+              &:after {
+                content: '';
+                display: block;
+                width: 8px;
+                height: 8px;
+                background: #6F815A;
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                margin-left: -4px;
+                transform: rotate(45deg);
+                opacity: 0;
+                transition: all 0.3s ease;
+                z-index: 20;
+              }
+              &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: #6F815A;
+                transition: all 0.3s ease;
+              }
+            }
+            &:hover {
+              > span {
+                &:before {
+                  width: 100%;
+                }
+              }
+            }
 					}
+          &.haschild {
+            > a {
+              position: relative;
+              &:hover {
+                > span {
+                  &:after {
+                    opacity: 1;
+                  }
+                }
+              }
+              &:after {
+                content: '';
+                display: block;
+                width: 16px;
+                height: 2px;
+                background: #6F815A;
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-top: 33px;
+              }
+              &:before {
+                content: '';
+                display: block;
+                width: 16px;
+                height: 2px;
+                background: #6F815A;
+                position: absolute;
+                top: 12px;
+                left: 0;
+                margin-top: 33px;
+              }
+            }
+            ul {
+              display: none;
+            }
+            &:hover {
+              > a > span:after {
+                opacity: 1;
+              }
+              > div {
+                display: block;
+              }
+              ul {
+                display: flex;
+              }
+            }
+          }
+          > div {
+            position: fixed;
+            top: 76px;
+            left: 0;
+            width: 100%;
+            background: #F5F5F5;
+            min-height: 88px;
+            display: none;
+            > ul {
+              padding: 34px 160px 20px;
+              margin: 0;
+              list-style: none;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              > li {
+                margin: 0 50px 12px;
+                a {
+                  color: #2C2C2B;
+                  text-decoration: none;
+                  font-size: 14px;
+                  text-transform: uppercase;
+                  font-family: "GothamProMedium";
+                  transition: all 0.3s ease;
+                  &:hover {
+                    color: #969A9C;
+                  }
+                }
+              }
+            }
+          }
 				}
 			}
 		}
