@@ -2421,78 +2421,6 @@ body {
     padding: 0 160px 0;
     display: flex;
     flex-wrap: wrap;
-    .product {
-      padding: 0;
-      background-color: #fff;
-      width: 376px;
-      margin: 0 84px 64px;
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
-      position: relative;
-      .img {
-        text-align: center;
-      }
-      .desc {
-        position: absolute;
-        bottom: 48px;
-        left: -104px;
-        z-index: 2;
-        font-size: 24px;
-        color: #000;
-        font-family: "GothamProMedium";
-        background: linear-gradient(90deg, #9AA988 0%, rgba(154, 169, 136, 0) 100%);
-        width: 375px;
-        min-height: 152px;
-        padding: 26px 32px 10px;
-        .folder {
-          color: #F5F5F5;
-          font-size: 12px;
-          text-transform: uppercase;
-          font-family: "GothamProBold";
-          margin-bottom: 6px;
-        }
-        .name {
-          color: #2C2C2B;
-          font-size: 16px;
-          font-family: "GothamProBold";
-          margin-bottom: 8px;
-        }
-        .params {
-          font-family: "GothamProRegular";
-          color: #2C2C2B;
-          font-size: 16px;
-          margin-bottom: 16px;
-        }
-        .price {
-          font-family: "GothamProBold";
-          color: #2C2C2B;
-          font-size: 24px;
-          span {
-            font-size: 16px;
-          }
-        }
-      }
-      .buy {
-        position: absolute;
-        bottom: 32px;
-        left: 50%;
-        margin-left: -32px;
-        width: 64px;
-        height: 64px;
-        z-index: 20;
-        button {
-          cursor: pointer;
-          padding: 0;
-          margin: 0;
-          outline-style: none;
-          background: #fff url('../images/ico-buy.svg') 50% 50% no-repeat;
-          width: 64px;
-          height: 64px;
-          border: 4px solid #DBEDF0;
-        }
-      }
-    }
   }
   .page-contact {
     padding: 0 160px 0;
@@ -2904,7 +2832,270 @@ body {
       .block-right {
         width: 376px;
       }
-
+    }
+  }
+  .page-product {
+    padding: 0 0 0 160px;
+    margin-bottom: 128px;
+    .product-wrap {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      .images {
+        display: flex;
+        width: 648px;
+        margin-right: 168px;
+        .thumbs {
+          width: 104px;
+          margin-right: 32px;
+          overflow: auto;
+          max-height: 656px;
+          &.wider {
+            width: 126px;
+          }
+          .img-thumb {
+            width: 104px;
+            height: 104px;
+            background-color: #fff;
+            margin-bottom: 32px;
+            img {
+              cursor: pointer;
+              width: 104px;
+              height: 104px;
+              object-fit: cover;
+            }
+          }
+        }
+        .image {
+          width: 512px;
+          background-color: #fff;
+          text-align: center;
+        }
+      }
+      .desc {
+        width: 100%;
+        .folder {
+          color: #969A9C;
+          font-size: 14px;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+          font-family: "GothamProMedium";
+        }
+        .name {
+          font-size: 64px;
+          color: #2C2C2B;
+          text-transform: uppercase;
+          font-family: 'Old Standard TT', serif;
+          margin-bottom: 64px;
+        }
+        .type {
+          font-size: 14px;
+          color: #969A9C;
+          text-transform: uppercase;
+          margin-bottom: 16px;
+          font-family: "GothamProMedium";
+        }
+        .note {
+          color: #2C2C2B;
+          font-size: 16px;
+          border-bottom: 8px solid #fff;
+          margin-bottom: 72px;
+          padding-bottom: 68px;
+        }
+        .params {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          font-family: "GothamProMedium";
+          li {
+            font-size: 14px;
+            color: #2C2C2B;
+            span {
+              color: #969A9C;
+              padding-right: 10px;
+            }
+          }
+        }
+        .product-price {
+          display: flex;
+          margin-bottom: 64px;
+          .price {
+            color: #2C2C2B;
+            font-size: 64px;
+            font-family: 'Old Standard TT', serif;
+            margin-right: 80px;
+            span {
+              color: #969A9C;
+              font-size: 30px;
+            }
+          }
+          .amount {
+            display: flex;
+            align-items: center;
+            button {
+              cursor: pointer;
+              outline-style: none;
+              padding: 0;
+              margin: 0;
+              border: none;
+              background: transparent;
+              color: #2C2C2B;
+              font-size: 48px;
+              font-family: "GothamProLight";
+              width: 40px;
+              text-align: center;
+            }
+            input[type="text"] {
+              outline-style: none;
+              padding: 0;
+              margin: 0;
+              border: none;
+              background: transparent;
+              color: #2C2C2B;
+              font-size: 48px;
+              font-family: "GothamProLight";
+              width: 40px;
+              text-align: center;
+            }
+          }
+        }
+        .product-add {
+          button {
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: top;
+            background: #6F815A;
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 14px 34px 10px;
+            height: 48px;
+            font-family: "GothamProMedium";
+            position: relative;
+            min-width: 208px;
+            text-align: center;
+            &:after {
+              content: '';
+              display: block;
+              background: #E9D1EB;
+              width: 80px;
+              height: 2px;
+              position: absolute;
+              top: 8px;
+              left: -16px;
+            }
+            &:before {
+              content: '';
+              display: block;
+              background: #E9D1EB;
+              width: 80px;
+              height: 2px;
+              position: absolute;
+              bottom: 8px;
+              right: -16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .other-prosucts-wr {
+    background-color: #fff;
+    padding: 120px 160px 64px;
+    .block-title {
+      font-family: 'Old Standard TT', serif;
+      color: #969A9C;
+      text-transform: uppercase;
+      font-size: 40px;
+      margin-bottom: 68px;
+      font-weight: bold;
+      span {
+        color: #2C2C2B;
+        margin-right: 175px;
+      }
+    }
+    .block-slider {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  .horizon-products {
+    .product {
+      padding: 0;
+      background-color: #fff;
+      width: 376px;
+      margin: 0 84px 64px;
+      position: relative;
+      .img {
+        text-align: center;
+      }
+      .desc {
+        position: absolute;
+        bottom: 48px;
+        left: -104px;
+        z-index: 2;
+        font-size: 24px;
+        color: #000;
+        font-family: "GothamProMedium";
+        background: linear-gradient(90deg, #9AA988 0%, rgba(154, 169, 136, 0) 100%);
+        width: 375px;
+        min-height: 152px;
+        padding: 26px 32px 10px;
+        .folder {
+          color: #F5F5F5;
+          font-size: 12px;
+          text-transform: uppercase;
+          font-family: "GothamProBold";
+          margin-bottom: 6px;
+        }
+        .name {
+          color: #2C2C2B;
+          font-size: 16px;
+          font-family: "GothamProBold";
+          margin-bottom: 8px;
+        }
+        .params {
+          font-family: "GothamProRegular";
+          color: #2C2C2B;
+          font-size: 16px;
+          margin-bottom: 16px;
+        }
+        .price {
+          font-family: "GothamProBold";
+          color: #2C2C2B;
+          font-size: 24px;
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+      .buy {
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        margin-left: -32px;
+        width: 64px;
+        height: 64px;
+        z-index: 20;
+        button {
+          cursor: pointer;
+          padding: 0;
+          margin: 0;
+          outline-style: none;
+          background: #fff url('../images/ico-buy.svg') 50% 50% no-repeat;
+          width: 64px;
+          height: 64px;
+          border: 4px solid #DBEDF0;
+        }
+      }
+    }
+    &.list {
+      .product {
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
     }
   }
 }
