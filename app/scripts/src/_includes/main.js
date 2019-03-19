@@ -118,14 +118,18 @@ $(function(){
         text.val(value);
     });
 
-
-
     $('.js-menu-top > li > ul').wrap('<div></div>');
 
 
-
-
-
+    $('.btn-menu-popup').on('click',function(){
+        if (!$(this).hasClass('active')) {
+            $(this).addClass('active');
+            $('.menu-top').addClass('active');
+        } else {
+            $(this).removeClass('active');
+            $('.menu-top').removeClass('active');
+        }
+    });
 
 
 });

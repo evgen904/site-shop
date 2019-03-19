@@ -19,12 +19,25 @@
                         <img src="images/site-logo.svg" alt="">
                     </a>
                 </div>
+                <div class="btn-menu-popup"></div>
                 <nav>
-                    <ul class="menu-top">
-                        <li><a href="#">Каталог</a></li>
-                        <li><a href="#">Представители</a></li>
-                        <li><a href="#">Обучение</a></li>
-                        <li><a href="#">Контакты</a></li>
+                    <ul class="menu-top js-menu-top">
+                        <li class="haschild">
+                            <a href="#">
+                                <span>Каталог</span>
+                            </a>
+                            <ul>
+                                <li><a href="#">Пигменты для губ</a></li>
+                                <li><a href="#">Пигменты для бровей</a></li>
+                                <li><a href="#">Пигменты для век</a></li>
+                                <li><a href="#">Корректоры</a></li>
+                                <li><a href="#">Карандаши</a></li>
+                                <li class="td-u"><a href="#">Аппарат</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><span>Представители</span></a></li>
+                        <li><a href="#"><span>Обучение</span></a></li>
+                        <li><a href="#"><span>Контакты</span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -34,7 +47,7 @@
                 </div>
                 <div class="cart-wr">
                     <a href="#">
-                        
+                        4
                     </a>
                 </div>
             </div>
@@ -194,6 +207,15 @@
                             <li><a href="#">Обучение</a></li>
                             <li><a href="#">Контакты</a></li>
                         </ul>
+                        <ul class="menu-mobile">
+                            <li class="title"><a href="#">Каталог</a></li>
+                            <li><a href="#">Пигменты для губ</a></li>
+                            <li><a href="#">Пигменты для бровей</a></li>
+                            <li><a href="#">Пигменты для век</a></li>
+                            <li><a href="#">Корректоры</a></li>
+                            <li><a href="#">Карандаши</a></li>
+                            <li class="td-u"><a href="#">Аппарат</a></li>
+                        </ul>
                     </nav>
                     <div class="phone-bot">
                         <a href="tel:+79257089260">+7 (925) 708-92-60</a>
@@ -203,13 +225,19 @@
                     <form>
                         <div class="field-form-wr">
                             <div class="field-form field-text">
-                                <input type="text" value="" placeholder="ИМЯ" required="">
+                                <div class="field-form-in">
+                                    <input type="text" value="" placeholder="ИМЯ" required="">
+                                </div>                                
                             </div>
                             <div class="field-form field-text">
-                                <input type="text" value="" placeholder="ТЕЛЕФОН" required="">
+                                <div class="field-form-in">
+                                    <input type="text" value="" placeholder="ТЕЛЕФОН" required="">
+                                </div>                                
                             </div>
                             <div class="field-form field-submit">
-                                <button type="submit">ОТПРАВИтЬ</button>
+                                <div class="field-form-in">
+                                    <button type="submit">ОТПРАВИтЬ</button>
+                                </div>                                
                             </div>
                         </div>                        
                         <div class="field-checkbox-wr">
