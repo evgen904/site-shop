@@ -212,6 +212,7 @@ body {
 						text-decoration: none;
 			            position: relative;
 			            padding: 0 35px;
+			            font-family: "GothamProMedium";
 			            @media all and (max-width: 1510px) {
 			              padding: 0 28px;
 			            }
@@ -271,6 +272,7 @@ body {
 			              }
 			            }
 			            &:hover {
+			            	color: #6F815A;
 			              > span {
 			                &:before {
 			                  width: 100%;
@@ -296,8 +298,9 @@ body {
                 background: #6F815A;
                 position: absolute;
                 top: 0;
-                left: 0;
-                margin-top: 33px;
+                left: -2px;
+                margin-top: 35px;
+                transition: all 0.3s ease;
                 @media all and (max-width: 960px) {
 			      display: none;
 			    }
@@ -310,8 +313,9 @@ body {
                 background: #6F815A;
                 position: absolute;
                 top: 10px;
-                left: 0;
-                margin-top: 33px;
+                left: 3px;
+                margin-top: 31px;
+                transition: all 0.3s ease;
                 @media all and (max-width: 960px) {
 			      display: none;
 			    }
@@ -324,8 +328,16 @@ body {
 			    }
             }
             &:hover {
-              > a > span:after {
-                opacity: 1;
+              > a {
+              	&:after {
+				left: 0;
+              	}
+              	&:before {
+              		left: 0;
+              	}
+              	> span:after {
+	                opacity: 1;
+	              }
               }
               > div {
                 display: block;
@@ -608,6 +620,21 @@ body {
     }
 		.block-left {
 			width: 33%;	
+			@media all and (max-width: 1680px) {
+				width: 31.6%;
+			}
+			@media all and (max-width: 1510px) {
+				width: 33%;
+			}
+			@media all and (max-width: 1245px) {
+width: 28%;
+        }
+        @media all and (max-width: 1180px) {
+width: 24%;
+        }
+        @media all and (max-width: 1080px) {
+width: 28%;
+        }
 			@media all and (max-width: 960px) {
 				width: 100%;
 				margin-bottom: 40px;
@@ -660,8 +687,11 @@ body {
           margin-left: 80px;
         }
         @media all and (max-width: 1510px) {
-          margin-left: 30px;
+          margin-left: 90px;
         }
+		@media all and (max-width: 1340px) {
+			margin-left: 30px;
+		}
         @media all and (max-width: 1180px) {
           margin-right: 15px;
           font-size: 13px;
@@ -677,6 +707,9 @@ body {
 		}
 		.block-body {
 			max-width: 376px;
+			        @media all and (max-width: 1245px) {
+max-width: 300px;
+        }
       @media all and (max-width: 1180px) {
         max-width: 268px;
       }
@@ -1293,7 +1326,7 @@ body {
                 margin-right: 0;
               }
             }
-						input[type="text"], input[type="email"] {
+						input[type="text"], input[type="tel"], input[type="email"] {
 							outline-style: none;
 							padding: 0 22px;
 							margin: 0;
@@ -1303,7 +1336,7 @@ body {
 							height: 56px;
 							display: block;
 							font-size: 14px;
-							color: #969A9C;
+							color: #000;
 							font-family: "GothamProRegular", Arial, "Helvetica Neue", Helvetica, sans-serif;
 							position: relative;
 							top: 8px;
@@ -1362,8 +1395,8 @@ body {
  							position: relative;
  							input[type="checkbox"] {
 								vertical-align:top;
-								width:0;
-								height:0;
+								width:1px;
+								height:1px;
 								padding: 0;
 								margin: 0;
 							}
@@ -1395,6 +1428,7 @@ body {
  						.field-checkbox-text {
  							padding: 4px 0 0 28px;
  							font-family: "GothamProMedium";
+ 							max-width: 396px;
  							@media all and (max-width: 960px) {
  								font-family: "GothamProRegular";
  							}
@@ -2024,16 +2058,17 @@ body {
     }
   }
   .page-course {
+  	padding-top: 76px;
   	@media all and (max-width: 960px) {
 		padding-top: 104px;
   	}
     .about-course {
       background: #fff url('../images/img-course.jpg') 50% 50% no-repeat;
       background-size: cover;
-      padding: 30px 160px 424px;
+      padding: 30px 200px 424px;
       @media all and (max-width: 1680px) {
-        padding-left: 80px;
-        padding-right: 80px;
+        padding-left: 120px;
+        padding-right: 120px;
         padding-bottom: 300px;
       }
       @media all and (max-width: 1510px) {
@@ -2054,6 +2089,7 @@ body {
       }
       .site-path {
         margin-bottom: 126px;
+        font-size: 12px;
         @media all and (max-width: 1510px) {
 	      margin-bottom: 80px;
 	    }
@@ -2120,7 +2156,7 @@ body {
       	@media all and (max-width: 640px) {
       		text-align: center;
       	}
-        button {
+        button, a {
           cursor: pointer;
           display: inline-block;
           vertical-align: top;
@@ -2460,16 +2496,21 @@ body {
         margin-bottom: 24px;
         &.type-col {
           display: flex;
-          input[type="text"], input[type="email"], select {
+          input[type="text"], input[type="email"], input[type="tel"], select {
             margin-left: 24px;
             text-align: center;
+            @media all and (max-width: 640px) {
+	        	margin-left: 10px;
+	        	padding-left: 10px;
+	        	padding-right: 10px;
+	        }
             &:first-child {
               margin-left: 0;
             }
           }
         }
       }
-      input[type="text"], input[type="email"] {
+      input[type="text"], input[type="email"], input[type="tel"] {
         display: block;
         width: 100%;
         box-sizing: border-box;
@@ -2477,7 +2518,7 @@ body {
         padding: 4px 22px 0;
         margin: 0;
         background: #fff;
-        color: #969A9C;
+        color: #000;
         border: none;
         height: 56px;
         &::-webkit-input-placeholder { color: #969A9C; }
@@ -2609,7 +2650,6 @@ body {
           	width: 100%;
           	margin: 0;
           	display: flex;
-          	flex-wrap: wrap;
           }
           .img-thumb {
             width: 104px;
@@ -2621,6 +2661,7 @@ body {
             	margin: 0 10px 10px 0;
             	width: 80px;
             height: 80px;
+            flex: 0 0 80px;
             }
             &:after {
               cursor: pointer;

@@ -15,7 +15,7 @@
         <header class="site-header">
             <div class="col-left">
                 <div class="site-logo">
-                    <a href="#">
+                    <a href="/">
                         <img src="images/site-logo.svg" alt="">
                     </a>
                 </div>
@@ -32,7 +32,7 @@
                                 <li><a href="#">Пигменты для век</a></li>
                                 <li><a href="#">Корректоры</a></li>
                                 <li><a href="#">Карандаши</a></li>
-                                <li class="td-u"><a href="#">Аппарат</a></li>
+                                <li><a href="#">Аппарат</a></li>
                             </ul>
                         </li>
                         <li><a href="#"><span>Представители</span></a></li>
@@ -55,7 +55,7 @@
         <div class="page-course">
             <div class="about-course">
                 <div class="site-path">
-                    <a href="#">ГЛАВНАЯ</a><span> / </span><a href="#">КАТАЛОГ</a><span> / </span>ПИГМЕНТЫ ДЛЯ БРОВЕЙ
+                    <a href="#">ГЛАВНАЯ</a><span> / </span>  ОБУЧЕНИЕ - БАЗОВЫЙ КУРС
                 </div>
                 <div class="name">
                     БАЗОВЫЙ КУРС
@@ -67,7 +67,7 @@
                     Обучение осуществляется практикующим мастером-преподавателем международного класса, лицензируемым тренером одной из ведущих школ ПМ в мире, Еленой Белинской. Елена также является чемпионом Поволжья и серебряным призером России по перманентному макияжу, постоянно выступает на международных конференциях в качестве спикера, является автором статей в профессиональные журналы.
                 </div>
                 <div class="submit">
-                    <button>Отправить</button>
+                    <a href="#form-bot">Записаться</a>
                 </div>
             </div>
             <div class="course-name">
@@ -266,12 +266,12 @@
         </div>
         <footer class="block-form">
             <div class="logo-bot">
-                <a href="#">
+                <a href="/">
                     <img src="images/logo-bot.svg" alt="">
                 </a>
             </div>
             <div class="site-footer">
-                <div class="nav-bar-bot">
+                <div class="nav-bar-bot" id="form-bot">
                     <nav>
                         <ul class="menu-bot">
                             <li class="haschild"><a href="#">Каталог</a></li>
@@ -286,7 +286,7 @@
                             <li><a href="#">Пигменты для век</a></li>
                             <li><a href="#">Корректоры</a></li>
                             <li><a href="#">Карандаши</a></li>
-                            <li class="td-u"><a href="#">Аппарат</a></li>
+                            <li><a href="#">Аппарат</a></li>
                         </ul>
                     </nav>
                     <div class="phone-bot">
@@ -303,22 +303,22 @@
                             </div>
                             <div class="field-form field-text">
                                 <div class="field-form-in">
-                                    <input type="text" value="" placeholder="ТЕЛЕФОН" required="">
+                                    <input type="tel" value="" placeholder="ТЕЛЕФОН" required="">
                                 </div>                                
                             </div>
                             <div class="field-form field-submit">
                                 <div class="field-form-in">
-                                    <button type="submit">ОТПРАВИтЬ</button>
+                                    <button type="submit">ОТПРАВИТЬ</button>
                                 </div>                                
                             </div>
                         </div>                        
                         <div class="field-checkbox-wr">
                             <div class="field-checkbox">
-                                <input type="checkbox" checked="" value="" id="personal-information">
+                                <input type="checkbox" checked="" value="" id="personal-information" required="">
                                 <label for="personal-information"></label>
                             </div>   
                             <div class="field-checkbox-text">
-                                Согласен на обработку персональных данных,<br>согласно <a href="#">Политике конфиденциальности</a>
+                                Согласен на обработку персональных данных, согласно <a href="#">Политике конфиденциальности</a>
                             </div>                         
                         </div>
                     </form>
