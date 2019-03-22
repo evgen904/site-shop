@@ -29,16 +29,19 @@ $(function(){
 
         activeStep = $this.data('id')+1;
         activeStepSelector = '.js-folder-img > div[data-step="'+activeStep+'"]';
-        $(prevStepSelector).addClass("visible animated flipOutX");
+        $(prevStepSelector).addClass("visible animated fadeOut");
         $('.js-folder-img > div').removeClass('active-js');
         $(activeStepSelector).addClass('active-js');
-        $(activeStepSelector).removeClass('flipOutX');
-        $(activeStepSelector).addClass("visible animated flipInX");
+        $(activeStepSelector).removeClass('fadeOut');
+        $(activeStepSelector).addClass("visible animated fadeInRight");
     };
 
     $('.js-folder-list li a').hover(function(){
         nextStep($(this));
-    },function(){});
+        $('.js-folder-list li a').removeClass('active');
+        $(this).addClass('active');
+    },function(){
+    });
 
 
     $('.js-open-card').on('click',function(){
@@ -137,6 +140,13 @@ $(function(){
             $(this).removeClass('active');
             $('.menu-top').removeClass('active');
         }
+    });
+
+    $('.js-buy-product').on('click', function(){
+        $(this).after('<div class="hint-prod">'+$(this).data('hint')+'</div>');
+        setTimeout(function(){
+            $('.hint-prod').remove();
+        },2600);
     });
 
 
