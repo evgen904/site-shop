@@ -588,6 +588,7 @@ body {
 			}
 		}
 		.block-top-img {
+            max-width: 920px;
 			@media all and (max-width: 1510px) {
 				max-width: 640px;
 			}
